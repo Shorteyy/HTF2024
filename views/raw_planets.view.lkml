@@ -141,6 +141,12 @@ view: raw_planets {
     type: number
     sql: ${TABLE}.ttv_flag ;;
   }
+
+  measure: sum_ttv_flag {
+    type: sum
+    sql: ${ttv_flag} ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [hostname, pl_name]
